@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06304c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="DA2 Setup">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQAElEQVR4nOydCVyT9R/Hf8AuZMA4B0gCKs6UQ4FAQeaRSmri3wNKy6NeaYdmZlDmkVpovYrKvMrj398TC48UKwUyBRSBkJSRMpSzORiHjFO2Mfb/wSbsZBug7nme3/vFy9fveZ7ftsc9n/2Oz/d3kGQyGRg4HjQ03bh9r+x+Fa+q9l9BLa+qhgf/FdSKxBKAGDioFLI707Hzz8VpiIuTu4ujhxszcNRwe1trMHCY9V8c7e3SrPzC1My8lOt5f98pHli1IQzHzMwsYNTw6eMDpoUGhPiySCQL0D/6JY6TyRk/XbhyOSe/5WEbQJgSVpa0ycF+i2ZNnj9tAugrfRRHWi4nNv7gLW4JQJg2sCyJW730+ZAxwHiMFsfNwmIoi/QbBQCBHaYE+0OJBI72NupVRojjXgV/064jZ/64BhDYBFYxW1a+OsJjsIH5DRXHxau5UWu3iSXtAIFlKGTSz/Efz2QHG5LZ3JBMh86mzn3vM6QMHAAf4oK12/57JtmQzPpLjl3Hz8XEHwQIfPHF+6+9v2Re73l6Ewe8BGWxOyEJIPDImsVzoUSgO6IrQ2/Vysadh5EycMyOo7/AR9xLBp3iOJ16Nf7QaYDANfARQydT11Xt1Qp0t9hLY9tEYoDAOzQqJe3Ql2NGDtO8pKXk+LeqZt57nyFlEAT4oOeviaupb9C8pC6Oh20iqAwYRwUIwgAfd/TabRINq0JdHHH7TuQXlQIEwci8eWfL3mNqJ1XaHOX8ap//vInMLmJCpZDvXfjR2Z7RfUal5Fj/3SGkDMIiEku27j2ufKZHHHdKKk6lZAAEgfnxl5R/7pV3H/aIIxZ55ISno6Pjo2/+232oEEfytRup1/8GCMIDZQDFIE8rxHEk6RJAILroFkOnOMQSSfK1XIBAdJGSeQNKAsjFcTknv6nlIUAgumhsboWSAHJxJF3OAgiEEnJJkKAJ9mtaNkAglIA1C/yXlMPhVtXWAwRCiYrKmsJSHolbxgMIhAY5nEISjKcABEIDWJ+QUJ2C0IqgTkgS1CFxILRQzhegkgOhnc5qBZUcCK1AYViI7TylHR0AgVDloUhMQqN7EFqBwiABBEIHSBwInSBxIHSCxIHQCRIHQidIHAidIHEgdILEgdAJEgdCJ0gcCJ0gcfQQ6t4M/83k0QGiCySOTkY5tsZN4s/yboTp3+7abLzidrt2ECA8ZpQxLwIC42Er+mRC5SKfOnPznkX1OjpkCQUOn151LW+gAgJDXHE4DpKsC616M6CWYqF9sU2x1GxfnuMXmS61rWRASCwsXEYAgkGnSD8cLzg2pzR8SIuF7rU24aWQwa0rxnaqJ69qkFhq0GrPeIJY4iCbd7wdWPPzvJIZwxupJIMWfYfZJno0vz6mViQ1v1ll2SEzA4SBKNWKGZAt9HmwOZzvyej7hmJlQvLWDLcTBfYyQAiJEEIcM4cJP5vE93EemO2kCqppm664/V7MAHgH5+IYP7h5+5T7oe4tYKDJ5Fl9kOqeV2UF8AtuxaFsXTwmZDLZmUK7zWmud+stAR7BoThc6eK4iXw16+Lx0S4Fh/Id4q66VjZTAL7AlTgYVEnMeMGqoBpL8pPevvShxGx3rlP8daZQhB9TBCddWRqpY02wIGFu2fNezeT+bqfaF+CHhj3T8saYOpiGpkh7Bx66M5gvOSzMO5b51m0Mr3KzNpVNr/lN5LgMl0McB2kHtn0zTItDNn9k/RZ25QgHEeg36/50+/GWI0y87l/7xRQ+6DdFddTN6W5nChkAs6YIVqOyUzwbYWck0LUVDBAPJeYNbSR5AgwEULIn5pbeqBwEY7x/ltkADILRck92YeG9AVTG4wPeJLxVeMMAg6DxHAidEFoc0MX6i291odgmvcL6lkBhZB0vsP+n1pL9TNNM78YgLBROjw/iiuP3ezYbLveM+JLBYFpXw7FRRMqosIZ/2665+Ti3bp90P2JYEyAkRBRHY5v5K+e8Ukps9eYsqB4UmegN43ZH/1NKp2Cy3dAfCDeABYbdJxwZqawMp0GSqZ6NY5mK4BxMwEPHQT2uCQzATjg8sqKBcOPBiCWOqmbSlGMjuHU0+SG0249ElvDe4/y28N64R5FbmICH99/j/G92qQ1VsbLNnVrLSUdH1LQ+DfP16UEgcYjazWb9PPx+k2LM8IvewoK3br80Wqgr/yKf+oIVtyOGKvbUhC+ckzgcvgkgDAQSx+fXXGAbQp7+KLTy9IISp0HS3l/CpLcnvVQcO65Kfnij0uqLTCYgDEQRB4x3fJ3tLE/DPsiWcCMM8i1svq+zok/7dRZT0EyUVjxRxLE/z1Es7WwxkM07js8pNWqoB8kCHI0shS+EaZHU4sBNJ0AMiCKOxDt28gSMyIx0NDpQ96yTaDNbUdicuoP/0aNyCCEOjoBWXK/oobwdWAP6xPKxdfIE7LncfUCImXCEEEf3MGBoaeiarlJcD00uaJPKYEJrBgZNCru+8nQ2D8/jirvB6HgOmehjPRudrkl2/z7PGRj4dl17tpt1+eeyLiPd8CbJ2wHVOyL07FlD/XwsFkd1EM4h1YFZtx46E4QzyrWDxNGFmay3Q6KC2y77yudq5o5UuJ/JxTbx2S4wQbXo+PWle1rzv/m7R4mws7UxnCH6fmaFZoYOmWx2ord8OnXs+KrpXooZMaYzdnXAwa04vO1F8E+eppOlX3eJAz5aV7pE65hTaJP/0NVGmTa0caJHs2aGwlqqRKqwR6Kfrfdn4n8nXkJUKwGurbY0RQgtv7qPs9NuChTWO4zGEUEZgCDigG3MKR6KATvfZju3S41+B4kUxGcpoiozhj/GKZYmBUbFYWZsdHTF2Fp5IreSvinNDRjJuj/dOY+Cdm8HGGejdd0qJmO5WC052qTGfd1TvJqmeip+8d9ku/xZam34a5OLrXfnKiwTGOgfb+ScfWEbVkeBYFUcTSKjv/EfZpZ3j++ae2rY7r8c5d5XL8AMO/9yij4zTH4IX747ogIYSYsEq18yVu+7RGh0dOMZW8m56GJSV3C1rd38gz+GTD7K+lf34L8yIRlmiP3jGZgZHlIspPDlrtZG73rGa8Lq7HusdmXLG/ryjQe5tibOK3nl3FD5tLbr9+nee33GurTCmqK4XqE2mHg/xT2TR78lsOxe3mkQSZowr7RvMxX6dqumAFbFUfRoHKixzPJuzFhcGJk4jN/cqQb4+GFYDv51T01IKbFNLVV5iStd/NtL90b3ddWoPt/qUwer1UrW/b7HRX2ZbbeW31kbUkW10NOphRk+CKnKX357dD/WE+vPrT5dsDrLHhrh1Wtv0Uj9CoLwGsk/3bb/tcgWPr8OmSL0BosQczMZrGhmeTe8POqBu02/3PG2djPnb/xF2FzDFMNLMFx4+S7soIKBQNoBVvzqcewfB5h+dXTd/hfLLQboacI+84yfvAE2wbBDeoY7YMP1oBToVEUVAxMWA/etJNy2A5gFw+I4y2VIjDfCnyQtYvPTd5A4ngY1rZ0tBmDCwLKtVYLhSXLYXhPM276Ns+K22UAELqDlVd3SaYg5W0n6swR2N7Bh67Nv1L16rPZjAdbHc9x9QDt/1yZyxACESaEgBkQT3fzCtcW0MgAOQvab0wZLO4CpASOxH11yBxgH8+K4XWv54y0HYGLAcF1FI+bntuBhsM/6y+7cOhN6EkV11C+vuwLsgwdxNIosFpwa1tBmEv8XeBvzTg1rFOFhJQ+cDBMsekBbkuTV8bRnFMAbWHzOCzaTAS7AzzZesGsgbjcbKEO9b2y64naE4wjwAq72eMvk0e1okuDBT2d9yO9ynLZmDAY4Am8bAKaU2ArbLKZ6NZo/wSG9sC+9NtX982tGj1s2cXC4O2QO3+oajz5zeMOgJ7LryoOHFnMSh58uNGkjv2/gc+vQsgbqyTt24e7NfRjyaRQ3qyynJYzg1OBzb3Pc7ivbICIdynewt5Q+5/ZYmiAymezbbOar57yEbbidUornTYc7ZGYXi23zqy3Dnmm2oQ6kx36/ibz0nOcPec743oMY/ztSc+to+/92gj/0YLdWUr9tHRg0+TqLufDs0Du1+NwRUhmi7EgNugaRr3quZsWYGhtaX0qRxjbzAzeddv3lhL9dIHVBIHHIsaa0v+Zft+q5ag9bQwP0/zaQv8lmHuXYN4mJtY8A4cTRzfyRD+ayGthDmph07T0aQTMpvcI66a5tommPN3t8EFcc3bAc2mYNF/6HJQzpslavVlidLWJAM42L2clIAwUSRw+wUQIjZ4IWojQp9IL2eOuBOC1NA0HiQOgEiQOhEyQOhE6QOBA6QeJA6ASJA6ETJA6ETpA4EDoxSXFQvGIOxG/z02NJtTXVC5tayktLcjKzkjI52WVCo3fnUobOiju4PZal/qHC3APhK5OKxMBYbEeELF/AZnu5e7rZebjZ0bpuuJwvqOJX5+de2p+UV9QMTByTtM8NE4cabfzCpItJuxKycur6Mh/aNvCNjINzWJoXRIUfLFm/u8iI97T1DImNWfZumHtvsRkRL2nfoQ0ns01ZIvhZ+5zmNjL69Q8zfvv+5CIfptE+OCMkIpCl9Qp16JKIofq3vX+EbeD8k0c2xvaujM63dY9cvTFjzxvTXU13F3TcLYxPZUbGfp7zzXy2UZOrHVhRYbomxVP8w8L96cCgD3cNj/902USDl85m+M05sHqch6mGdDDTIC3L/SOlVFG206hWDAdYkTsz3Zgu2mZQu4QtO7pVMntdUr5hhbZHEHt6L5NOWIFRfqfSM4V63oXiHPnW0iUa79NWW5LNrRY0kZle7iEsplqJ4jI5MiohL55j3HrqTwasiKM5/9Thd5O1PB6qZ8Dy1xZuihyptnqcS9jSg2/xZsfnCYA+KM7siAAXpRPC3HOJlBkreho97tMjWMzM7N7fiurgGx2qtpm5OPv4tqideYJH7Vlb3/kn96gWLdShkUHuuzjcfrWmHw+Yr1ZEZXm7N6+f9kl6mfoViv8ry2MD9a84SHULiApSrjbEty5nHL1SorwsrWcoO1hfPeXiNy5YdZ6sMPfwKiVlQBo4STE/cFQXvKV4+Dq7mGTNgo82hyT//I6obVlV6ufdo14J1Fejk1mhbJWfsoiblFvCzc26pfxbdvRdEurc6xogVh6+7i4qZ5qzk29w1fvAknIul6t6imFtZ5rrvODGBJPkJx2ICWQde0FlaUcX33HBDunllbo7ovTOKkO5HSDMTU8pkzRQCpK44pCemsUOVj0eyRd1Gx4t6fFvU+OBAZDVmh1tohYTrFMArnor4uqUU+lqP0rg6DWd1dvS47Ze7GgV40t8K5NbDhXQXJKiWrMw/NjTPfvf7SSz/FgeqqcEfIHQeJPtCYCrrmwDNyulVO0c09+XqdulsPKPGOevXKZ31im8rt+xhHstQ6VmsWZFh7n3s/ynerJjF41ULTkEaVd4DcAUwZfP0cxL46h3KZhuzgxdzQ5ob0xWsTeEnCxYp8jTojJOIkf5Ss43CgAABttJREFUF03xj2AbaHjo+DifTVvfiFRttLZxM47m6+skPyVwZoK1CGpb1Da/oDla6fq5M33DVe2NziZkebcexLyUZK7yu9FY46JZfd0fg86K+WJDrJ+auHhHdp7LMVUHHW8OqbBS3U2iAYp2J7vT3gj0VD7TxD2ZW61Uk0jKc9PTVJaR6my9Gm6ld0P1DNm1Z8u2IDVlNCd/tWNjpokWGwB/4qBR1NuMbUCsdSMdqpvv4jCVro0wPyOdr9KvEfHzTqqarKywcOOMeUAeMemN1CMbV6iXGc1pO7ctT+CaZmtDDs7EQaE5aJQTTRJtHUWyR1B4iEoQpD79PKdKrdcgrk9PLlD5absFRgc5A0Nvh8F+bWvqt3NC1KMtgqSvtkT9r0C/e/tUwddgH4qVh5f6FhbC2notHUUKrCB81dxT20kL4wPVHRGaNUO14IGGh6/H5UvlejuflMFRGzYejNQIz4pKdq3btuFKtWl6G8rgSxzW7myWmjiauUUCzWrFlhUQ7avWh7Gb+MLUiUA/LkGwGZt+oKzXER4OrFUbYr+ezFQ/z8/6YN2O3SYZZtMEV9WKRu+jc0xNOldzhBi0N9ghfbYsrH2jQnszPKgOAfF7tmsoQ8y9uCd8yTasKAPgShyUwZELxnmqneRzc0o1HoaDV1ToUNCPTwqJCGDpMjzoXku2rnlXbbihiHfkk5jwjy/m1AEMgRtxWLFfWRkXptEjOHUpW8NFYLLY071Af6Cx2NFeVtpv47V34lU7QbCRsX/d5lXnS025Y6IVfLQ5rIIXxR5drd7ABKUZ8cml6nUKhRE8O8BT5ZQ47auY2Qmlol7e/93tqa8P7WlaUodGRnh9xSlQfd7kEbPfOfC6ujueuO3LGCw0PzXBeslB9gh8fteB71JjA13UL/H270xI0SjGqQ6+S4JUWwPQ+8rk9frwWrhX0m+p5oCB/hBVw4PqOm7Taran6iu5J/fGnL+PRWUA7JQcdL8FS3cp9TNpVDsYNGGxhnpqH7DZnAbNxyua5iO0N55nqw3Jyb+UxtczuLyBm5fIWRQSpNSS8AqI8mWkdH8EhTH9raXR6oviNwsdwzeuHwd6RyxIOZV0vmwgNxEbEEhDXJ0qKmuAyeMZNHVFkIF5O83HKK3mI8V5YiRLtfaBNhdHv2nRFWcRBinXXEzolDAzMxQDvaBx4qvRcQX0kMlTQ4BeBCDzoqmJAwrDnOmA4Y1PtdBUcuST9dB81Nr6o3oGLvZVbbTWchJz6w0o9mGc5VK26nYdLkFstoPpTizoJ1AY5i6OeBGHSJCWdGDaSzHLdfYLoL3xvL+qQVGWmZ5eadBPVsTnnMytVznl6LM4zBnzO7npAAqDhOWSQ1zFry7nC8r5pdmZWecvc/XUDnSv6LChal2J9MtcQwMcnXEWTtVktlLLlx4SEeiRdL/IJMdx9RMPN6bZp98fj9t3AiAQqnz27hKSh5vBMUYEkeisVvxZ/TGSEbgFCsPcb4SXqxNBl29G6AIWG1AY5mZmZrPYwQCBUOLFiSFQGJ32eeRkfRYegmDIJdEpjsnBfjZ0fO5ShugD1laWUBJALg4KmTw9NBAgEF1EhAVBSYDuqOwcVLMgHtEtBoU4ol9gh455FiAIT3igDxSDPN0zniNu9TKAIDzQGO1O94gjbOyo2ZMMCC8j8AsUwHj/ngpEZSTYlndeNTfH3RJyCMOAj37rysUqZ5QPfLw9F82aBBCEBD760cNVlg4xk8lkyse19Y3spTHF/1YCBJEY9oxr+uF4Rzsb5ZPq4oDcq+CPW7SmqeUhQBAD6HplJewYPkR9lUwtLQyY6af4j0kkC4AgAPBBw8etqQyga2rC1HFjv/3wTYAgAHs3roKPW+slnX2TFVEzVi2KBAhcE7Ns/tI5U3Vd1dLm6AZe+vxg4ta9xwACj2x6a9GGFS/D0LyuDL2JQ875K1mLP/7qYRseB9ESFRqVcuLLj2bqG8ejXxyQm4XF0Wu3l1dWAwT2GeLqdPrbTX4s/XPJDRIHpE7YOO+9z7LyCwECy0x6zi/hy48cGDaGZDZUHJD2dun+Uxc+/f54faPJb0CF0MDOhg4bGW9GzTTcpDBCHHIeNDTF7TvxQ+JvUmkHQGABCwtzqAmoDHtbg7cJ6sJoccjhlvJWxu3JyCsACNNmemhAfMxylpd7H17bR3HI+eVS5uGzqReu5gKE6fHChKDlC2a8OLHvUwv6JQ45za0Pf0//6+yf1y9ezW152AYQTw8rS9oLEwLnTB4/a2IwfZAl6B8DIA5loD6u37xTXd9QB/8ammAfp07YVP3AdFdwxi7O9gwHhjXsdzjYWtszbJj2jPFjnoWlBRg4/g8AAP//ZilrOQAAAAZJREFUAwDKr2F0VjiQkgAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Trimble DA2 + Catalyst — Field Setup Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14181d;
+    --ink-soft:#3a434d;
+    --paper:#f3efe6;
+    --card:#ffffff;
+    --blue:#0a5384;
+    --blue-deep:#06304c;
+    --blue-tint:#e9f1f7;
+    --hi:#ffa91a;
+    --hi-deep:#c87a00;
+    --green:#2f8f5b;
+    --red:#c0392b;
+    --line:rgba(6,48,76,.14);
+    --line-strong:rgba(6,48,76,.30);
+    --shadow:0 1px 0 rgba(6,48,76,.05), 0 14px 30px -18px rgba(6,48,76,.35);
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --display:'Archivo',var(--sans);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background-color:var(--paper);
+    background-image:
+      linear-gradient(rgba(6,48,76,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6,48,76,.045) 1px, transparent 1px);
+    background-size:26px 26px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px 90px;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:40;
+    background:var(--blue-deep);
+    color:#fff;
+    border-bottom:3px solid var(--hi);
+  }
+  .topbar-inner{
+    max-width:880px;margin:0 auto;padding:11px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:800;letter-spacing:.02em;}
+  .brand .mark{
+    width:30px;height:30px;border-radius:7px;background:var(--hi);
+    display:grid;place-items:center;flex:none;
+    box-shadow:inset 0 0 0 2px rgba(0,0,0,.12);
+  }
+  .brand .mark svg{display:block;}
+  .brand .logo-img{height:34px;width:auto;display:none;border-radius:5px;background:#fff;padding:2px 5px;}
+  .brand .name{font-size:.92rem;line-height:1.05;}
+  .brand .name small{display:block;font-family:var(--mono);font-weight:500;font-size:.62rem;letter-spacing:.18em;color:#9ec6e2;text-transform:uppercase;}
+
+  /* platform toggle */
+  .ptoggle{display:flex;align-items:center;gap:9px;}
+  .ptoggle .lab{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#9ec6e2;}
+  .seg{display:flex;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:9px;padding:3px;}
+  .seg button{
+    appearance:none;border:0;background:transparent;color:#cfe2f0;cursor:pointer;
+    font-family:var(--display);font-weight:700;font-size:.82rem;
+    padding:6px 15px;border-radius:6px;display:flex;align-items:center;gap:6px;transition:.18s;
+  }
+  .seg button svg{display:block;}
+  .seg button[aria-pressed="true"]{background:var(--hi);color:var(--blue-deep);box-shadow:0 1px 4px rgba(0,0,0,.25);}
+
+  /* ---------- Hero ---------- */
+  header.hero{padding:46px 0 26px;}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);font-weight:600;}
+  h1{
+    font-family:var(--display);font-weight:900;
+    font-size:clamp(2.1rem,6vw,3.4rem);line-height:.98;letter-spacing:-.015em;
+    margin:.32em 0 .28em;text-transform:uppercase;
+  }
+  h1 em{font-style:normal;color:var(--blue);}
+  .lede{font-size:1.06rem;color:var(--ink-soft);max-width:60ch;}
+  .meta-strip{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;
+  }
+  .chip{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;
+    background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:6px 13px;display:inline-flex;align-items:center;gap:7px;color:var(--ink-soft);
+  }
+  .chip b{color:var(--ink);font-weight:600;}
+  .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--hi);}
+
+  /* ---------- Progress ---------- */
+  .progress-card{
+    position:sticky;top:64px;z-index:30;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px 18px;margin:8px 0 34px;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:16px;
+  }
+  .progress-card .ring{flex:none;}
+  .progress-meta{flex:1;min-width:0;}
+  .progress-meta .t{font-family:var(--display);font-weight:700;font-size:.95rem;}
+  .progress-meta .s{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft);}
+  .bar{height:8px;background:var(--blue-tint);border-radius:99px;overflow:hidden;margin-top:7px;}
+  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--hi));border-radius:99px;transition:width .35s cubic-bezier(.4,0,.2,1);}
+  .reset-btn{
+    appearance:none;border:1px solid var(--line);background:transparent;border-radius:8px;cursor:pointer;
+    font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);
+    padding:7px 11px;flex:none;transition:.15s;
+  }
+  .reset-btn:hover{border-color:var(--line-strong);color:var(--ink);}
+
+  /* ---------- Phase sections ---------- */
+  .phase{margin:0 0 30px;}
+  .phase-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px;}
+  .phase-num{
+    flex:none;width:46px;height:46px;border-radius:11px;
+    background:var(--blue-deep);color:#fff;display:grid;place-items:center;
+    font-family:var(--display);font-weight:900;font-size:1.25rem;
+    box-shadow:inset 0 0 0 2px rgba(255,255,255,.08);
+  }
+  .phase.optional .phase-num{background:var(--hi);color:var(--blue-deep);}
+  .phase-title{font-family:var(--display);font-weight:800;font-size:1.32rem;line-height:1.1;letter-spacing:-.01em;margin:2px 0 1px;text-transform:uppercase;}
+  .phase-sub{font-size:.9rem;color:var(--ink-soft);}
+
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:6px 20px;box-shadow:var(--shadow);
+  }
+
+  /* steps */
+  .step{display:flex;gap:13px;padding:15px 0;border-bottom:1px dashed var(--line);cursor:pointer;}
+  .step:last-child{border-bottom:0;}
+  .step .chk{flex:none;margin-top:1px;}
+  .step .chk input{position:absolute;opacity:0;width:0;height:0;}
+  .step .chk label{
+    display:grid;place-items:center;width:24px;height:24px;border-radius:7px;
+    border:2px solid var(--line-strong);cursor:pointer;transition:.15s;background:#fff;
+  }
+  .step .chk label svg{opacity:0;transform:scale(.5);transition:.15s;}
+  .step .chk input:checked + label{background:var(--green);border-color:var(--green);}
+  .step .chk input:checked + label svg{opacity:1;transform:scale(1);}
+  .step .chk input:focus-visible + label{outline:2px solid var(--blue);outline-offset:2px;}
+  .step-body{flex:1;min-width:0;}
+  .step-body .h{font-weight:600;font-size:1rem;margin:0 0 3px;}
+  .step-body .d{font-size:.92rem;color:var(--ink-soft);margin:0;}
+  .step-body .d code, .kv code{
+    font-family:var(--mono);font-size:.82em;background:var(--blue-tint);color:var(--blue-deep);
+    padding:1px 6px;border-radius:5px;border:1px solid rgba(10,83,132,.18);
+  }
+  .step.done .step-body .h{color:var(--ink-soft);}
+  .step-tag{
+    display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+    padding:2px 7px;border-radius:5px;margin-left:7px;vertical-align:1px;font-weight:600;
+  }
+  .tag-ios{background:#e7f0fb;color:#1d6fc0;}
+  .tag-android{background:#e6f5ec;color:#1f8a4c;}
+
+  /* recommended-settings key/value table */
+  .kv{margin:12px 0 4px;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .kv-row{display:flex;gap:12px;padding:9px 13px;border-bottom:1px solid var(--line);font-size:.9rem;}
+  .kv-row:last-child{border-bottom:0;}
+  .kv-row:nth-child(odd){background:#fafcfd;}
+  .kv-row .k{flex:none;width:42%;font-weight:600;color:var(--ink);}
+  .kv-row .v{color:var(--ink-soft);}
+  .kv-cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);padding:9px 13px 0;font-weight:600;}
+
+  /* coordinate-system profile card (mirrors the Field Maps screen) */
+  .cscard{margin:13px 0 4px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fafcfd;}
+  .cs-row{padding:11px 14px;border-bottom:1px solid var(--line);}
+  .cs-row:last-child{border-bottom:0;}
+  .cs-row .lbl{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:600;}
+  .cs-row .val{font-weight:600;font-size:.96rem;margin-top:3px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;line-height:1.3;}
+  .cs-row .val .epsg{font-family:var(--mono);font-size:.7rem;background:var(--blue-deep);color:#fff;padding:2px 8px;border-radius:6px;letter-spacing:.03em;font-weight:600;flex:none;}
+  .cs-row .sub{font-size:.8rem;color:var(--ink-soft);font-weight:400;margin-top:3px;}
+  .cs-row.xform .val{font-family:var(--mono);font-size:.82rem;word-break:break-word;}
+  .step-body ol.flow{margin:9px 0 2px;padding-left:20px;}
+  .step-body ol.flow li{margin:6px 0;font-size:.92rem;color:var(--ink-soft);}
+  .step-body ol.flow li b{color:var(--ink);}
+
+  /* callout */
+  .note{
+    display:flex;gap:11px;border-radius:10px;padding:12px 14px;margin:13px 0 4px;font-size:.88rem;
+    background:#fff7e9;border:1px solid #f3d79a;color:#6b4d12;
+  }
+  .note.blue{background:var(--blue-tint);border-color:#bcd9ec;color:var(--blue-deep);}
+  .note .ico{flex:none;font-family:var(--display);font-weight:900;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:var(--hi);color:#fff;font-size:.8rem;}
+  .note.blue .ico{background:var(--blue);}
+  .note b{font-weight:700;}
+
+  /* platform conditional visibility */
+  /* platform-agnostic: same steps on iOS and Android */
+
+  /* ---------- Software tabs ---------- */
+  .tabs{display:flex;gap:8px;margin-bottom:0;}
+  .tab-btn{
+    appearance:none;cursor:pointer;flex:1;
+    background:var(--card);border:1px solid var(--line);border-bottom:0;
+    border-radius:12px 12px 0 0;padding:14px 16px;text-align:left;transition:.15s;
+    position:relative;top:1px;
+  }
+  .tab-btn .tt{font-family:var(--display);font-weight:800;font-size:1.05rem;display:block;color:var(--ink-soft);}
+  .tab-btn .ts{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#9aa6b0;}
+  .tab-btn[aria-selected="true"]{background:var(--card);border-color:var(--line);box-shadow:0 -3px 0 var(--hi) inset;}
+  .tab-btn[aria-selected="true"] .tt{color:var(--blue-deep);}
+  .tab-btn[aria-selected="true"] .ts{color:var(--blue);}
+  .tab-panel{display:none;border-radius:0 0 14px 14px;border-top:0;}
+  .tab-panel.active{display:block;}
+
+  /* ---------- Troubleshooting ---------- */
+  details.tro{
+    background:var(--card);border:1px solid var(--line);border-radius:11px;margin-bottom:10px;overflow:hidden;
+  }
+  details.tro summary{
+    cursor:pointer;padding:14px 16px;font-weight:600;list-style:none;display:flex;align-items:center;gap:11px;font-size:.97rem;
+  }
+  details.tro summary::-webkit-details-marker{display:none;}
+  details.tro summary .q{flex:none;font-family:var(--display);font-weight:900;color:var(--red);}
+  details.tro summary .arr{margin-left:auto;flex:none;transition:.2s;color:var(--blue);font-family:var(--mono);}
+  details.tro[open] summary .arr{transform:rotate(90deg);}
+  details.tro .ans{padding:0 16px 16px 41px;font-size:.91rem;color:var(--ink-soft);}
+  details.tro .ans ol{margin:0;padding-left:18px;}
+  details.tro .ans li{margin:5px 0;}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:46px;border-top:2px solid var(--line-strong);padding-top:26px;}
+  .foot-card{
+    background:var(--blue-deep);color:#fff;border-radius:16px;padding:26px 26px;
+    display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  }
+  .foot-card h3{font-family:var(--display);font-weight:800;text-transform:uppercase;margin:0 0 4px;font-size:1.15rem;}
+  .foot-card p{margin:0;color:#bcd9ec;font-size:.9rem;max-width:42ch;}
+  .foot-contact{font-family:var(--mono);font-size:.82rem;line-height:1.8;}
+  .foot-contact a{color:var(--hi);text-decoration:none;}
+  .foot-contact .nm{font-family:var(--display);font-size:1rem;font-weight:700;color:#fff;}
+  .legal{font-family:var(--mono);font-size:.66rem;color:var(--ink-soft);text-align:center;margin-top:22px;letter-spacing:.04em;}
+
+  section[id]{scroll-margin-top:130px;}
+
+  @media (max-width:560px){
+    .topbar-inner{justify-content:space-between;}
+    .progress-card{position:static;top:auto;flex-wrap:wrap;margin:8px 0 28px;}
+    .kv-row{flex-direction:column;gap:2px;}
+    .kv-row .k{width:auto;}
+    .step{padding:17px 0;}
+    .step .chk label{width:28px;height:28px;}
+    .tab-btn{padding:13px 13px;}
+    .tab-btn .tt{font-size:.98rem;}
+    .wrap{padding:0 16px 80px;}
+    .card{padding:4px 16px;}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    body{background:#fff;}
+    .topbar,.progress-card,.reset-btn{display:none !important;}
+    .card,.foot-card,details.tro{box-shadow:none;}
+    .tab-panel{display:block !important;border:1px solid var(--line);border-radius:12px;margin-top:10px;}
+    .tab-btn{display:none;}
+    details.tro{break-inside:avoid;}
+    details.tro[open] .ans, details.tro .ans{display:block;}
+    a[href]{color:var(--ink);}
+  }
+
+  /* ---------- Add-to-Home-Screen hint (mobile only) ---------- */
+  .a2hs{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:12px;
+    background:var(--blue-deep);color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:14px;
+    padding:11px 13px;box-shadow:0 12px 34px -8px rgba(0,0,0,.55);}
+  .a2hs .ic{flex:none;width:32px;height:32px;border-radius:9px;background:var(--hi);display:grid;place-items:center;}
+  .a2hs .tx{flex:1;font-size:.8rem;line-height:1.35;}
+  .a2hs .tx b{display:block;font-family:var(--display);font-size:.92rem;letter-spacing:.01em;}
+  .a2hs .tx span{color:#bcd9ec;}
+  .a2hs .x{flex:none;appearance:none;background:transparent;border:0;color:#9ec6e2;font-size:1.15rem;line-height:1;cursor:pointer;padding:4px 8px;}
+  .a2hs .x:hover{color:#fff;}
+  @media print{ .a2hs{display:none !important;} }
+
+</style>
+</head>
+<body data-platform="ios">
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <!-- ============================================================= -->
+      <!--  ALLTERRA LOGO  ·  paste your official logo file path or URL   -->
+      <!--  into the src="" below (a hosted URL or a base64 data: string).-->
+      <!--  It appears automatically and replaces the shield monogram.    -->
+      <!-- ============================================================= -->
+      <img id="brandLogo" class="logo-img" alt="AllTerra Central" src="">
+      <span class="mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1l6 3.2v4.3c0 3.4-2.5 5.7-6 6.5-3.5-.8-6-3.1-6-6.5V4.2L8 1z" fill="#06304c"/></svg>
+      </span>
+      <span class="name">AllTerra Central<small>Mapping &amp; GIS</small></span>
+    </div>
+    <div class="ptoggle">
+      <span class="lab">iOS &amp; Android</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Field Crew Setup Guide</span>
+    <h1>Trimble&nbsp;DA2<br><em>+ Catalyst</em> Setup</h1>
+    <p class="lede">Get your DA2 receiver delivering high-accuracy positions into <b>ArcGIS Field Maps</b> and <b>Trimble TerraFlex</b> — from power-on to first point. Follow it top to bottom; the steps are the same on iOS and Android.</p>
+    <div class="meta-strip">
+      <span class="chip"><span class="dot"></span><b>~10&nbsp;min</b> first-time setup</span>
+      <span class="chip"><span class="dot"></span>Accuracy: <b>60 cm → 1 cm</b></span>
+      <span class="chip"><span class="dot"></span>Needs <b>Catalyst</b> subscription</span>
+      <span class="chip"><span class="dot"></span>iOS &amp; Android</span>
+    </div>
+  </header>
+
+  <div class="progress-card">
+    <svg class="ring" width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+      <circle cx="23" cy="23" r="19" fill="none" stroke="var(--blue-tint)" stroke-width="6"/>
+      <circle id="ringFill" cx="23" cy="23" r="19" fill="none" stroke="var(--hi)" stroke-width="6"
+        stroke-linecap="round" stroke-dasharray="119.4" stroke-dashoffset="119.4"
+        transform="rotate(-90 23 23)" style="transition:stroke-dashoffset .35s"/>
+    </svg>
+    <div class="progress-meta">
+      <div class="t">Setup progress</div>
+      <div class="s"><span id="pcount">0</span> of <span id="ptotal">0</span> steps complete</div>
+      <div class="bar"><i id="barFill"></i></div>
+    </div>
+    <button class="reset-btn" onclick="resetSteps()">Reset</button>
+  </div>
+
+  <!-- PHASE 0 -->
+  <section class="phase" id="kit">
+    <div class="phase-head">
+      <div class="phase-num">0</div>
+      <div><div class="phase-title">Pack the kit &amp; install apps</div><div class="phase-sub">Sort the gear and software before you head out — do the installs while you still have good signal.</div></div>
+    </div>
+    <div class="card">
+      <div class="step"><span class="chk"><input type="checkbox" id="k1" class="step-check"><label for="k1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Trimble DA2 receiver</p><p class="d">Plus your pole, bipod, or Catalyst Handle mount.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="k2" class="step-check"><label for="k2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Charged USB power bank + USB-C cable</p><p class="d">The DA2 has no internal battery — it draws power over USB-C the whole session.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="k3" class="step-check"><label for="k3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Phone or tablet (with a data plan)</p><p class="d">A cellular/Wi-Fi connection is used for internet-based corrections and to keep your Catalyst license current. Satellite-delivered RTX corrections also work without signal, but a data plan keeps you covered everywhere.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="k4" class="step-check"><label for="k4"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Trimble ID with an active Catalyst subscription</p><p class="d">Your login must have a Catalyst license assigned (60 / 30 / 10 / 1 cm, or an On-Demand hour pack).</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="k5" class="step-check"><label for="k5"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Install your collection app</p><p class="d"><b>ArcGIS Field Maps</b> and/or <b>Trimble TerraFlex</b> from the App Store / Google Play — whichever you'll be collecting in.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="k6" class="step-check"><label for="k6"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Install <b>Trimble Mobile Manager (TMM)</b></p><p class="d">Free, and the first thing to set up. You need it for <b>Field Maps</b> (and any third-party app) and for <b>DA2 firmware updates</b>. <b>Using only TerraFlex? You can skip TMM</b> — see Phase 2.</p></div></div>
+    </div>
+  </section>
+
+  <!-- PHASE 1 -->
+  <section class="phase" id="power">
+    <div class="phase-head">
+      <div class="phase-num">1</div>
+      <div><div class="phase-title">Power on &amp; mount</div><div class="phase-sub">Get the DA2 powered and positioned for a clear sky view.</div></div>
+    </div>
+    <div class="card">
+      <div class="step"><span class="chk"><input type="checkbox" id="p1" class="step-check"><label for="p1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Connect power</p><p class="d">Plug the power bank into the DA2's USB-C port.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="p2" class="step-check"><label for="p2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Press the power button until the LED blinks blue</p><p class="d">A blinking blue LED means the DA2 is discoverable over Bluetooth and ready to pair.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="p3" class="step-check"><label for="p3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Mount it high, with sky overhead</p><p class="d">For precision work (10 cm or better) Trimble recommends a 2 m or taller pole. Keep the antenna above head height and pointed at the sky.</p></div></div>
+    </div>
+  </section>
+
+  <!-- PHASE 2 -->
+  <section class="phase" id="tmm">
+    <div class="phase-head">
+      <div class="phase-num">2</div>
+      <div><div class="phase-title">Trimble Mobile Manager</div><div class="phase-sub">Activates Catalyst and configures the receiver for <b>Field Maps</b> and any third-party app. <b>TerraFlex users can skip to Phase 3.</b></div></div>
+    </div>
+    <div class="card">
+      <div class="note blue" style="margin:14px 0 4px;"><span class="ico">i</span><div><b>Collecting in TerraFlex only?</b> Skip this whole phase — TerraFlex connects to the DA2 and handles your Catalyst sign-in itself. You'd only open TMM to apply a DA2 firmware update.</div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="t2" class="step-check"><label for="t2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Sign in with your Trimble ID</p><p class="d">Open TMM and sign in with the ID that has the Catalyst license assigned to it.</p></div></div>
+
+      <!-- Bluetooth pairing: platform specific -->
+      <div class="step"><span class="chk"><input type="checkbox" id="t3" class="step-check"><label for="t3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Pair the DA2, then connect in TMM</p><p class="d">With the DA2's LED blinking blue, pair it in your device's <code>Settings → Bluetooth</code>. Then open TMM → <b>Position Source</b> and select the DA2 (match the serial number on the label). Once selected, TMM connects and shows the receiver, satellites, and live accuracy.</p></div></div>
+
+      <div class="step"><span class="chk"><input type="checkbox" id="t5" class="step-check"><label for="t5"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Set the GNSS configuration</p><p class="d">Open <b>GNSS configuration</b> and apply the settings below. These are recommended defaults for U.S. / Texas (CONUS) mapping work.</p>
+
+        <div class="kv-cap">Recommended GNSS config — CONUS / Texas</div>
+        <div class="kv">
+          <div class="kv-row"><span class="k">Correction source</span><span class="v"><code>Auto</code> (Trimble Correction Hub)</span></div>
+          <div class="kv-row"><span class="k">GNSS output / datum</span><span class="v"><code>NAD83 (2011)</code> · EPSG:6318</span></div>
+          <div class="kv-row"><span class="k">Geoid model</span><span class="v"><code>GEOID18 (CONUS)</code></span></div>
+          <div class="kv-row"><span class="k">Antenna / pole height</span><span class="v">Set it here — TMM passes it to Field Maps</span></div>
+        </div>
+        <div class="note"><span class="ico">!</span><div><b>Pole height lives in TMM now.</b> Current Field Maps versions have no antenna-height field for Trimble units — they read it straight from TMM, so enter your pole height here. <i>(TerraFlex users aren't in TMM at all — they enter pole height inside TerraFlex.)</i></div></div>
+        <div class="note blue"><span class="ico">i</span><div>Working outside CONUS or on a project with a specified datum? Confirm the output coordinate system and geoid with your AllTerra rep before collecting.</div></div>
+      </div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="t6" class="step-check"><label for="t6"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Start your Catalyst session</p><p class="d">If you're on an On-Demand hour pack, start the session under <b>Licenses</b> so corrections begin streaming. Subscription plans are always-on. Leave TMM running in the background.</p></div></div>
+    </div>
+  </section>
+
+  <!-- PHASE 3 -->
+  <section class="phase" id="software">
+    <div class="phase-head">
+      <div class="phase-num">3</div>
+      <div><div class="phase-title">Connect your software</div><div class="phase-sub">Keep TMM running, then set up the app you're collecting in.</div></div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Field software">
+      <button class="tab-btn" role="tab" id="tab-fm" aria-selected="true" aria-controls="panel-fm" onclick="setTab('fm')">
+        <span class="tt">ArcGIS Field Maps</span><span class="ts">Esri · GIS data collection</span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-tf" aria-selected="false" aria-controls="panel-tf" onclick="setTab('tf')">
+        <span class="tt">Trimble TerraFlex</span><span class="ts">Form-based GIS capture</span>
+      </button>
+    </div>
+
+    <!-- FIELD MAPS PANEL -->
+    <div class="card tab-panel active" id="panel-fm" role="tabpanel" aria-labelledby="tab-fm">
+      <div class="step"><span class="chk"><input type="checkbox" id="f1" class="step-check"><label for="f1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Confirm TMM is connected first</p><p class="d">The DA2 must already be configured and connected in TMM (Phase 2). Don't use the Trimble GNSS Status app — TMM is the one that talks to Field Maps.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="f2" class="step-check"><label for="f2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Add <b>Trimble Mobile Manager</b> as the location provider</p><p class="d">In Field Maps go to <b>Profile → Location provider → Add</b> and choose <b>Trimble Mobile Manager</b> — not the DA2 directly. Every Trimble receiver you have then appears on the provider screen, so <b>pick the unit you want</b>. If you run two DA2s, both show up — just select the right one. TMM passes through the rest: receiver model, live accuracy, and pole height.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="f3" class="step-check"><label for="f3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">There's nothing else to set on the receiver — TMM handles it</p><p class="d">Current Field Maps versions expose <b>no configurable fields</b> for Trimble GNSS units. The receiver details and your <b>pole/antenna height flow in from TMM</b> — so set the pole height back in TMM (Phase 2), not here.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="f4" class="step-check"><label for="f4"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Build your location profile</p><p class="d">This is what makes DA2 positions line up on your basemap. Build it in this order:</p>
+        <ol class="flow">
+          <li>Set the <b>GNSS coordinate system</b> — <b>search by its EPSG code</b> (<code>6318</code>) rather than the name; it's faster and avoids picking the wrong one. This matches the DA2 output you set in TMM.</li>
+          <li>Set the <b>map coordinate system</b> the same way — <b>search the EPSG code</b> <code>3857</code> for Web Mercator, matching your basemap.</li>
+          <li><b>Zoom into your data-collection area on the map first.</b> Datum transformations are region-specific, so only the relevant ones show up once you're zoomed in.</li>
+          <li>Pick the <b>datum transformation</b>, then <b>name the profile</b>. Naming it after the conversion — e.g. <code>6318 to 3857</code> — makes it easy to recognize next time.</li>
+        </ol>
+        <div class="kv-cap">Typical CONUS / Texas profile</div>
+        <div class="cscard">
+          <div class="cs-row"><div class="lbl">GNSS Coordinate System</div><div class="val">GCS NAD 1983 (2011)<span class="epsg">EPSG:6318</span></div></div>
+          <div class="cs-row"><div class="lbl">Map Coordinate System</div><div class="val">WGS 1984 Web Mercator Auxiliary Sphere<span class="epsg">EPSG:3857</span></div></div>
+          <div class="cs-row xform"><div class="lbl">Datum Transformation</div><div class="val">~WGS_1984_(ITRF08)_To_NAD_1983_2011</div><div class="sub">USA – CONUS and Alaska; PRVI</div></div>
+        </div>
+        <div class="note blue"><span class="ico">i</span><div>Profile name in this example: <code>6318 to 3857</code>. If positions land a steady few feet off a known point, the transformation or coordinate systems don't match — recheck this profile.</div></div>
+        </div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="f5" class="step-check"><label for="f5"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Check the accuracy banner, then collect</p><p class="d">Open your map. The GPS banner should report DA2-level accuracy. Once it converges, start adding points.</p></div></div>
+      <div class="note blue"><span class="ico">i</span><div>After the first setup, just power on the DA2 and open Field Maps with TMM running — it reconnects to the DA2 automatically. No need to re-add the provider each day.</div></div>
+    </div>
+
+    <!-- TERRAFLEX PANEL -->
+    <div class="card tab-panel" id="panel-tf" role="tabpanel" aria-labelledby="tab-tf">
+      <div class="note" style="margin:14px 0 4px;"><span class="ico">✓</span><div><b>No Trimble Mobile Manager required.</b> TerraFlex talks to the DA2 directly and manages your Catalyst sign-in and corrections itself. (TMM is only needed to update the DA2's firmware.)</div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="x1" class="step-check"><label for="x1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Sign in &amp; open the GNSS configuration</p><p class="d">Sign in to TerraFlex with your Catalyst Trimble ID. Then tap the <b>Location status</b> tile at the top of the Home screen, or go to <b>menu → GNSS configuration</b>.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="x1i" class="step-check"><label for="x1i"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Pair the DA2 in Bluetooth settings first</p><p class="d">With the DA2's LED blinking blue, pair it in your device's <code>Settings → Bluetooth</code> so TerraFlex can list it.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="x2" class="step-check"><label for="x2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Select your DA2 from the device list</p><p class="d">TerraFlex scans for nearby receivers and lists them by model + serial number. Tap your DA2 to connect.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="x3" class="step-check"><label for="x3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Enter antenna height &amp; measurement point</p><p class="d">In the <b>Antenna height</b> field, enter your measured height and pick the measurement point you used. <i>Catalyst Handle:</i> if you measured to the bottom of the handle, add 2.3 cm.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="x4" class="step-check"><label for="x4"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Set the Real-time Configuration</p><p class="d">Choose your real-time correction source so you're getting the highest live accuracy your subscription allows.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="x5" class="step-check"><label for="x5"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">(Optional) Plan for offline corrections</p><p class="d">The DA2 supports offline GNSS post-processing in TerraFlex. If you'll use it, set <b>Primary Display Value</b> to <code>After offline GNSS processing</code> so the accuracy you see reflects the processed result.</p></div></div>
+      <div class="note blue"><span class="ico">i</span><div>TerraFlex talks to the DA2 directly — once it's connected in GNSS configuration, you're collecting. No Trimble Mobile Manager involved.</div></div>
+    </div>
+  </section>
+
+  <!-- PHASE 4 -->
+  <section class="phase optional" id="field">
+    <div class="phase-head">
+      <div class="phase-num">★</div>
+      <div><div class="phase-title">In the field: best accuracy</div><div class="phase-sub">Habits that keep your numbers tight.</div></div>
+    </div>
+    <div class="card">
+      <div class="step"><span class="chk"><input type="checkbox" id="b1" class="step-check"><label for="b1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Let it converge before the first point</p><p class="d">Give the receiver a few minutes to refine — longer under canopy or cloud. Watch the live accuracy in TMM and wait until it settles within your job's tolerance.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="b2" class="step-check"><label for="b2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Keep the antenna upright and clear</p><p class="d">Hold the pole vertical and the antenna above head height. Don't let your body, vehicles, or buildings shadow the sky view — that's the #1 cause of poor positions.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="b3" class="step-check"><label for="b3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Initialize in the open, then move into cover</p><p class="d">Let the receiver converge to full accuracy where it has a clear view of the sky first. Once it's locked in, you can move into tougher spots — under canopy or close to buildings — and hold a solid solution. Catalyst's RTX corrections are delivered by satellite, not just over the internet, so you keep a correction stream even with no cell signal.</p></div></div>
+    </div>
+  </section>
+
+  <!-- TROUBLESHOOTING -->
+  <section id="troubleshoot">
+    <div class="phase-head" style="margin-bottom:14px;">
+      <div class="phase-num" style="background:var(--red);">?</div>
+      <div><div class="phase-title">Troubleshooting</div><div class="phase-sub">The issues field crews hit most.</div></div>
+    </div>
+
+    <details class="tro">
+      <summary><span class="q">A.</span> Field Maps is stuck on "Acquiring location" <span class="arr">▸</span></summary>
+      <div class="ans">
+        <ol>
+          <li>Fully close both Field Maps and TMM (swipe them away).</li>
+          <li>Open <b>TMM first</b>: sign in and connect to the DA2 — wait until you see live accuracy.</li>
+          <li>Confirm the correction source is set to <b>Auto</b>.</li>
+          <li>With TMM still running, open Field Maps and reselect <b>Trimble Mobile Manager</b> (and your DA2) as the location provider.</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="tro">
+      <summary><span class="q">B.</span> Accuracy is way worse than TMM reports <span class="arr">▸</span></summary>
+      <div class="ans">
+        Usually the app is reading the phone's built-in GPS, not the DA2. In Field Maps, confirm <b>Trimble Mobile Manager</b> is the selected location provider and that you've picked the <b>right receiver</b> on the provider screen — if you run more than one DA2, it's easy to land on the wrong unit. Also confirm TMM is running and connected, the DA2 is paired in your device's Bluetooth settings, and the antenna is clear of obstructions.
+      </div>
+    </details>
+
+    <details class="tro">
+      <summary><span class="q">C.</span> Recorded points are shifted a few feet from a known control point <span class="arr">▸</span></summary>
+      <div class="ans">
+        That's almost always a datum or geoid mismatch. Make sure the TMM output (<code>NAD83 2011</code>, <code>GEOID18</code>) matches your map's coordinate system and any transformation in Field Maps. A consistent offset in X/Y/Z is the classic symptom.
+      </div>
+    </details>
+
+    <details class="tro">
+      <summary><span class="q">D.</span> The DA2 won't show up over Bluetooth <span class="arr">▸</span></summary>
+      <div class="ans">
+        <ol>
+          <li>Confirm the LED is blinking blue (discoverable). If not, hold power to power-cycle.</li>
+          <li>Make sure the power bank is actually delivering power — the DA2 has no battery.</li>
+          <li>Pair the DA2 in your device's <code>Settings → Bluetooth</code> first, then open the app.</li>
+          <li>Forget any old DA2 pairing on the device, then re-pair. If needed, reset the DA2 by holding power until the LED turns off, then power back on.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    <div class="foot-card">
+      <div>
+        <h3>Need a hand?</h3>
+        <p>Your AllTerra Central team supports DA2, Catalyst, Field Maps, and TerraFlex setup across Texas. Reach out anytime.</p>
+      </div>
+      <div class="foot-contact">
+        <div class="nm">Miguel Manning</div>
+        Mapping &amp; GIS Sales Manager<br>
+        <a href="tel:+19729467673">972.946.7673</a><br>
+        <a href="mailto:miguel.manning@allterracentral.com">miguel.manning@allterracentral.com</a><br>
+        <a href="https://allterracentral.com">allterracentral.com</a>
+      </div>
+    </div>
+    <p class="legal">AllTerra Central · Field setup reference for Trimble DA2 + Catalyst · Steps follow current Trimble &amp; Esri documentation. Datum/geoid values shown are CONUS defaults — verify per project.</p>
+  </footer>
+
+</div>
+
+<script>
+  // ---- software tabs ----
+  function setTab(t){
+    var fm = t==='fm';
+    document.getElementById('tab-fm').setAttribute('aria-selected', fm);
+    document.getElementById('tab-tf').setAttribute('aria-selected', !fm);
+    document.getElementById('panel-fm').classList.toggle('active', fm);
+    document.getElementById('panel-tf').classList.toggle('active', !fm);
+    updateProgress();
+  }
+
+  // ---- progress ----
+  var RING = 119.4;
+  function visible(el){ return el.offsetParent !== null; }
+  function updateProgress(){
+    var checks = Array.prototype.slice.call(document.querySelectorAll('.step-check'))
+      .filter(function(c){ return visible(c.closest('.step')); });
+    var total = checks.length;
+    var done = checks.filter(function(c){ return c.checked; }).length;
+    checks.forEach(function(c){ c.closest('.step').classList.toggle('done', c.checked); });
+    document.getElementById('pcount').textContent = done;
+    document.getElementById('ptotal').textContent = total;
+    var pct = total ? done/total : 0;
+    document.getElementById('barFill').style.width = (pct*100)+'%';
+    document.getElementById('ringFill').style.strokeDashoffset = RING*(1-pct);
+  }
+  function resetSteps(){
+    document.querySelectorAll('.step-check').forEach(function(c){ c.checked=false; });
+    updateProgress();
+  }
+  document.querySelectorAll('.step-check').forEach(function(c){
+    c.addEventListener('change', updateProgress);
+  });
+
+  // ---- whole-row tap toggles the step (bigger touch target for the field) ----
+  document.querySelectorAll('.step').forEach(function(step){
+    step.addEventListener('click', function(e){
+      if (e.target.closest('a')) return;     // don't hijack links
+      if (e.target.closest('.chk')) return;  // let the native checkbox handle its own taps
+      var box = step.querySelector('.step-check');
+      if (!box) return;
+      box.checked = !box.checked;
+      box.dispatchEvent(new Event('change'));
+    });
+  });
+
+  updateProgress();
+
+  // ---- show the AllTerra logo if a src was provided ----
+  (function(){
+    var logo = document.getElementById('brandLogo');
+    var src = logo && logo.getAttribute('src');
+    if(src && src.trim()){
+      logo.style.display = 'block';
+      var mark = document.querySelector('.brand .mark');
+      if(mark) mark.style.display = 'none';
+    }
+    if(logo){ logo.addEventListener('error', function(){ logo.style.display='none'; }); }
+  })();
+</script>
+
+<div id="a2hs" class="a2hs" hidden role="note">
+  <span class="ic" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4" stroke="#06304c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20h14" stroke="#06304c" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+  <div class="tx"><b>Add to Home Screen</b><span id="a2hs-how"></span></div>
+  <button class="x" type="button" aria-label="Dismiss" onclick="document.getElementById('a2hs').hidden=true">&#10005;</button>
+</div>
+<script>
+  // Runtime web-app manifest (lets Android offer Install). iOS uses the apple-touch-icon + meta tags above.
+  (function(){
+    try{
+      var icon512 = "data:image/png;base64,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";
+      var m = { name:"Trimble DA2 + Catalyst Setup", short_name:"DA2 Setup",
+        start_url: location.href, scope:".", display:"standalone",
+        background_color:"#f3efe6", theme_color:"#06304c",
+        icons:[{ src: icon512, sizes:"512x512", type:"image/png", purpose:"any maskable" }] };
+      var url = URL.createObjectURL(new Blob([JSON.stringify(m)], {type:"application/manifest+json"}));
+      var l = document.createElement("link"); l.rel="manifest"; l.href=url; document.head.appendChild(l);
+    }catch(e){}
+  })();
+  // Show the install hint only on a phone, and only when not already installed.
+  (function(){
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    var isAndroid = /Android/i.test(ua);
+    var standalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
+    if ((isIOS || isAndroid) && !standalone && window.innerWidth <= 820){
+      document.getElementById("a2hs-how").textContent = isIOS
+        ? "Tap Share, then \u201CAdd to Home Screen.\u201D"
+        : "Tap the \u22EE menu, then \u201CAdd to Home screen.\u201D";
+      document.getElementById("a2hs").hidden = false;
+    }
+  })();
+</script>
+
+</body>
+</html>
