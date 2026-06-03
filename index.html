@@ -342,10 +342,25 @@
     <button class="reset-btn" onclick="resetSteps()">Reset</button>
   </div>
 
-  <!-- PHASE 0 -->
-  <section class="phase" id="kit">
+  <!-- PHASE 0 · LICENSE -->
+  <section class="phase" id="license">
     <div class="phase-head">
       <div class="phase-num">0</div>
+      <div><div class="phase-title">Activate the Catalyst license</div><div class="phase-sub">Do this first — usually back at the office. The license has to be accepted and assigned to a Trimble ID before the DA2 will deliver corrections.</div></div>
+    </div>
+    <div class="card">
+      <div class="step"><span class="chk"><input type="checkbox" id="l1" class="step-check"><label for="l1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Open the Trimble email — or go to License Manager</p><p class="d">When a Catalyst license is assigned to you, Trimble emails you. Tap the <b>blue button</b> in that email, or go straight to <code>license-manager.trimble.com</code>.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="l2" class="step-check"><label for="l2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Sign in or create a Trimble ID</p><p class="d">Use the <b>same email address</b> the license was assigned to. No Trimble ID yet? Create one with that exact email.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="l3" class="step-check"><label for="l3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Accept the terms, then Activate</p><p class="d">Read and accept the license agreement, then tap <b>Activate</b>.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="l4" class="step-check"><label for="l4"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Confirm it's assigned to the right user</p><p class="d">In License Manager, check the license shows under the correct person's Trimble ID — that's the login the crew signs into TMM / TerraFlex with.</p></div></div>
+      <div class="note blue"><span class="ico">i</span><div><b>Who should the license be assigned to?</b><ul style="margin:8px 0 0;padding-left:18px;"><li style="margin:5px 0;"><b>One person on the unit:</b> assign it directly to their email — they'll make their own Trimble ID with that address.</li><li style="margin:5px 0;"><b>Several people, one unit:</b> either reassign the license to each user when needed, or set up a single <b>shared Trimble ID</b> (a generic team email) that everyone signs in with using the same username and password.</li><li style="margin:5px 0;"><b>Multiple licenses and multiple people:</b> create several generic Trimble IDs and drop a <b>laminated card</b> with each one's username and password in its kit box — or just reassign licenses manually as they change hands.</li></ul></div></div>
+    </div>
+  </section>
+
+  <!-- PHASE 1 · KIT -->
+  <section class="phase" id="kit">
+    <div class="phase-head">
+      <div class="phase-num">1</div>
       <div><div class="phase-title">Pack the kit &amp; install apps</div><div class="phase-sub">Sort the gear and software before you head out — do the installs while you still have good signal.</div></div>
     </div>
     <div class="card">
@@ -354,14 +369,14 @@
       <div class="step"><span class="chk"><input type="checkbox" id="k3" class="step-check"><label for="k3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Phone or tablet (with a data plan)</p><p class="d">A cellular/Wi-Fi connection is used for internet-based corrections and to keep your Catalyst license current. Satellite-delivered RTX corrections also work without signal, but a data plan keeps you covered everywhere.</p></div></div>
       <div class="step"><span class="chk"><input type="checkbox" id="k4" class="step-check"><label for="k4"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Trimble ID with an active Catalyst subscription</p><p class="d">Your login must have a Catalyst license assigned (60 / 30 / 10 / 1 cm, or an On-Demand hour pack).</p></div></div>
       <div class="step"><span class="chk"><input type="checkbox" id="k5" class="step-check"><label for="k5"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Install your collection app</p><p class="d"><b>ArcGIS Field Maps</b> and/or <b>Trimble TerraFlex</b> from the App Store / Google Play — whichever you'll be collecting in.</p></div></div>
-      <div class="step"><span class="chk"><input type="checkbox" id="k6" class="step-check"><label for="k6"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Install <b>Trimble Mobile Manager (TMM)</b></p><p class="d">Free, and the first thing to set up. You need it for <b>Field Maps</b> (and any third-party app) and for <b>DA2 firmware updates</b>. <b>Using only TerraFlex? You can skip TMM</b> — see Phase 2.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="k6" class="step-check"><label for="k6"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Install <b>Trimble Mobile Manager (TMM)</b></p><p class="d">Free, and the first thing to set up. You need it for <b>Field Maps</b> (and any third-party app) and for <b>DA2 firmware updates</b>. <b>Using only TerraFlex? You can skip TMM</b> — see Phase 3.</p></div></div>
     </div>
   </section>
 
   <!-- PHASE 1 -->
   <section class="phase" id="power">
     <div class="phase-head">
-      <div class="phase-num">1</div>
+      <div class="phase-num">2</div>
       <div><div class="phase-title">Power on &amp; mount</div><div class="phase-sub">Get the DA2 powered and positioned for a clear sky view.</div></div>
     </div>
     <div class="card">
@@ -374,8 +389,8 @@
   <!-- PHASE 2 -->
   <section class="phase" id="tmm">
     <div class="phase-head">
-      <div class="phase-num">2</div>
-      <div><div class="phase-title">Trimble Mobile Manager</div><div class="phase-sub">Activates Catalyst and configures the receiver for <b>Field Maps</b> and any third-party app. <b>TerraFlex users can skip to Phase 3.</b></div></div>
+      <div class="phase-num">3</div>
+      <div><div class="phase-title">Trimble Mobile Manager</div><div class="phase-sub">Activates Catalyst and configures the receiver for <b>Field Maps</b> and any third-party app. <b>TerraFlex users can skip to Phase 4.</b></div></div>
     </div>
     <div class="card">
       <div class="note blue" style="margin:14px 0 4px;"><span class="ico">i</span><div><b>Collecting in TerraFlex only?</b> Skip this whole phase — TerraFlex connects to the DA2 and handles your Catalyst sign-in itself. You'd only open TMM to apply a DA2 firmware update.</div></div>
@@ -403,7 +418,7 @@
   <!-- PHASE 3 -->
   <section class="phase" id="software">
     <div class="phase-head">
-      <div class="phase-num">3</div>
+      <div class="phase-num">4</div>
       <div><div class="phase-title">Connect your software</div><div class="phase-sub">Keep TMM running, then set up the app you're collecting in.</div></div>
     </div>
 
@@ -418,9 +433,9 @@
 
     <!-- FIELD MAPS PANEL -->
     <div class="card tab-panel active" id="panel-fm" role="tabpanel" aria-labelledby="tab-fm">
-      <div class="step"><span class="chk"><input type="checkbox" id="f1" class="step-check"><label for="f1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Confirm TMM is connected first</p><p class="d">The DA2 must already be configured and connected in TMM (Phase 2). Don't use the Trimble GNSS Status app — TMM is the one that talks to Field Maps.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="f1" class="step-check"><label for="f1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Confirm TMM is connected first</p><p class="d">The DA2 must already be configured and connected in TMM (Phase 3). Don't use the Trimble GNSS Status app — TMM is the one that talks to Field Maps.</p></div></div>
       <div class="step"><span class="chk"><input type="checkbox" id="f2" class="step-check"><label for="f2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Add <b>Trimble Mobile Manager</b> as the location provider</p><p class="d">In Field Maps go to <b>Profile → Location provider → Add</b> and choose <b>Trimble Mobile Manager</b> — not the DA2 directly. Every Trimble receiver you have then appears on the provider screen, so <b>pick the unit you want</b>. If you run two DA2s, both show up — just select the right one. TMM passes through the rest: receiver model, live accuracy, and pole height.</p></div></div>
-      <div class="step"><span class="chk"><input type="checkbox" id="f3" class="step-check"><label for="f3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">There's nothing else to set on the receiver — TMM handles it</p><p class="d">Current Field Maps versions expose <b>no configurable fields</b> for Trimble GNSS units. The receiver details and your <b>pole/antenna height flow in from TMM</b> — so set the pole height back in TMM (Phase 2), not here.</p></div></div>
+      <div class="step"><span class="chk"><input type="checkbox" id="f3" class="step-check"><label for="f3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">There's nothing else to set on the receiver — TMM handles it</p><p class="d">Current Field Maps versions expose <b>no configurable fields</b> for Trimble GNSS units. The receiver details and your <b>pole/antenna height flow in from TMM</b> — so set the pole height back in TMM (Phase 3), not here.</p></div></div>
       <div class="step"><span class="chk"><input type="checkbox" id="f4" class="step-check"><label for="f4"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label></span><div class="step-body"><p class="h">Build your location profile</p><p class="d">This is what makes DA2 positions line up on your basemap. Build it in this order:</p>
         <ol class="flow">
           <li>Set the <b>GNSS coordinate system</b> — <b>search by its EPSG code</b> (<code>6318</code>) rather than the name; it's faster and avoids picking the wrong one. This matches the DA2 output you set in TMM.</li>
