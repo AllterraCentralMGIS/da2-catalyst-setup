@@ -9,7 +9,7 @@ interactivity (progress tracking, platform toggle) and the "Add to Home Screen"
 install hint only work when the page is *served*, not when an `.html` file is
 opened or downloaded directly.
 
-**Live link:** https://senderomaps.github.io/da2-catalyst-setup/
+**Live link:** https://allterracentralmgis.github.io/da2-catalyst-setup/
 
 ## Updating
 
